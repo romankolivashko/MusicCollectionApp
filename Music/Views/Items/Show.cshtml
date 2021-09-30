@@ -1,0 +1,17 @@
+@{
+  Layout = "_Layout";
+}
+
+<h1>Music Record Details: </h1>
+
+<h2>@Model["item"].Description</h2>
+<h3>Category: @Model["category"].Name</h3>
+
+<a href='/categories/@Model["category"].Id/items/new'>Add another item</a>
+<a href='/categories'>View all categories</a>
+
+<form action='/items/delete/@Model.Id' method="post">
+  <button type="submit" name="button">Delete Item</button>
+</form>
+
+ '/categories/@Model["category"].Id/items/@item.Id'
